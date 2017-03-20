@@ -1,8 +1,8 @@
 WordClock
 =========
 
-A word clock created in pygame for my raspberry pi.
+Eine  Word-Clock erstellt mit pygame für rin Raspberry-Pi mit Waveshare-10.1 inc Display.
 
-![Wordclock](https://pbs.twimg.com/media/BnH2BBOCAAAfD4F.jpg)
+Verwendet wird die screen.py Klasse aus einem Adafruit Tutorial, um eine Word-Clock zu erstellen. Alle 5min soll die aktuelle Zeit in Text-Form beschrieben werden. All 3s wird ein Punkt angezeit um zu zeigen, dass die Word-Clock noch läuft und die Zeit voranschreitet.
 
-This uses the screen.py class from an Adafruit tutorial and creates a word clock.  Every 5 minutes the appropriate word to describe the current time will be highlighted.  Every 3 seconds a dot is highlighted indicating the passage of time (and showing that the display & app hasn't freezed).
+Der Ganze Code basiert auf der Arbeit von ChadMcCallum https://github.com/ChadMcCallum/WordClock
