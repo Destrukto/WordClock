@@ -58,10 +58,10 @@ while running:
         hour = (1 if hour == 12 else hour + 1)
     dw(["Es", "ist", "halb", "zehn"], [1,1,(1 if minute >= 30 and minute < 35 else 0),
         (1 if (minute >= 10 and minute < 15) or (minute >=50 and minute < 55) else 0)], line1)
-    dw(["viertel","fünf", "und" "zwanzig" ], [
+    dw(["viertel","fünf", "und", "zwanzig" ], [
         (1 if minute >= 15 and minute < 20 or minute >= 45 and minute < 50 else 0),
         (1 if minute >= 5 and minute < 10 or minute >= 25 and minute < 30 or minute >= 35 and minute < 40 or minute >= 55 else 0),
-        (1 if minute >= 35 and minute < 40),
+        (1 if minute >= 35 and minute < 40 else 0),
         (1 if minute >= 20 and minute < 30 or minute >= 35 and minute < 45 else 0)], line2)
     dw(["minuten", "vor", "nach", "eins"], [(1 if minute >= 35 and minute < 45 or minute >= 50 else 0),(1 if minute >= 35 else 0),(1 if minute < 30 and minute >= 5 else 0),(1 if hour == 1 else 0)], line3)
     dw(["drei", "zwei", "vier", "fünf"], [(1 if hour == 3 else 0),(1 if hour == 2 else 0),(1 if hour == 4 else 0),(1 if hour == 5 else 0)], line4)
