@@ -62,7 +62,7 @@ while running:
         (1 if minute >= 15 and minute < 20 or minute >= 45 and minute < 50 else 0),
         (1 if minute >= 5 and minute < 10 or minute >= 25 and minute < 30 or minute >= 35 and minute < 40 or minute >= 55 else 0),
         (1 if minute >= 20 and minute < 25 or minute >= 35 and minute < 45 else 0)], line2)
-    dw(["halb", "nach", "vor", "eins"], [(1 if minute >= 25 and minute < 30 else 0),(1 if minute < 25 and minute >= 5 else 0),(1 if minute >= 35 or minute >= 25 and minute <= 30 else 0),(1 if hour == 1 else 0)], line3)
+    dw(["halb", "nach", "vor", "eins"], [(1 if minute >= 25 and minute < 30 else 0),(1 if minute < 25 and minute >= 5 else 0),(1 if minute >= 35 or minute >= 25 and minute < 30 else 0),(1 if hour == 1 else 0)], line3)
     dw(["drei", "zwei", "vier", "fünf"], [(1 if hour == 3 else 0),(1 if hour == 2 else 0),(1 if hour == 4 else 0),(1 if hour == 5 else 0)], line4)
     dw(["sechs", "sieben", "acht", "neun"], [(1 if hour == 6 else 0),(1 if hour == 7 else 0),(1 if hour == 8 else 0),(1 if hour == 9 else 0)], line5)
     dw(["zehn", "elf", "zwölf", "uhr"], [(1 if hour == 10 else 0),(1 if hour == 11 else 0),(1 if hour == 12 else 0),(1 if minute >= 0 and minute < 5 else 0)], line6)
