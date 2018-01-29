@@ -65,7 +65,7 @@ while running:
         (1 if minute >= 25 and minute < 30 else 0)], line2)
     dw(["nach", "halb", "vor", "eins"], [
         (1 if minute < 25 and minute >= 5 or minute >= 35 and minute < 40  else 0),
-        (1 if minute >= 25 and minute < 30 or minute >= 35 and minute < 40 else 0),
+        (1 if minute >= 25 and minute < 30 or minute >= 40 and minute < 59 else 0),
         (1 if minute > 35  else 0),
         (1 if hour == 1 else 0)], line3)
     dw(["drei", "zwei", "vier", "fünf"], [
