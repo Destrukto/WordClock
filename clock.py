@@ -54,7 +54,7 @@ while running:
     line6 = 410
     hour = int(strftime("%I", localtime()))
     minute = int(strftime("%M", localtime()))
-    if(minute >= 30):
+    if(minute >= 25):
         hour = (1 if hour == 12 else hour + 1)
     dw(["Es", "ist", "halb", "zehn"], [1,1,(1 if minute >= 30 and minute < 35 else 0),
         (1 if (minute >= 10 and minute < 15) or (minute >=50 and minute < 55) else 0)], line1)
@@ -73,8 +73,16 @@ while running:
         (1 if hour == 2 else 0),
         (1 if hour == 4 else 0),
         (1 if hour == 5 else 0)], line4)
-    dw(["sechs", "sieben", "acht", "neun"], [(1 if hour == 6 else 0),(1 if hour == 7 else 0),(1 if hour == 8 else 0),(1 if hour == 9 else 0)], line5)
-    dw(["zehn", "elf", "zwölf", "uhr"], [(1 if hour == 10 else 0),(1 if hour == 11 else 0),(1 if hour == 12 else 0),(1 if minute >= 0 and minute < 5 else 0)], line6)
+    dw(["sechs", "sieben", "acht", "neun"], [
+        (1 if hour == 6 else 0),
+        (1 if hour == 7 else 0),
+        (1 if hour == 8 else 0),
+        (1 if hour == 9 else 0)], line5)
+    dw(["zehn", "elf", "zwölf", "uhr"], [
+        (1 if hour == 10 else 0),
+        (1 if hour == 11 else 0),
+        (1 if hour == 12 else 0),
+        (1 if minute >= 0 and minute < 5 else 0)], line6)
     drawDotLine()
     pygame.display.update()
     time.sleep(1)
