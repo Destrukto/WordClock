@@ -15,7 +15,7 @@ font = pygame.font.Font('segoeui.ttf', 73)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
-circleY = 560
+circleY = 580
 circleRadius = 5
 dots = 30
 
