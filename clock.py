@@ -11,7 +11,7 @@ from pygame.locals import *
 
 screen = screen()
 pygame.mouse.set_visible(0)
-font = pygame.font.Font('segoeui.ttf', 80)
+font = pygame.font.Font('segoeui.ttf', 88)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
@@ -27,7 +27,7 @@ def dw(texts, ons, y):
         rs.append(r)
         totalwidth += r.get_width()
     leftover = (1024 - totalwidth - (buffer * 2)) / len(texts)
-    offset = (buffer / 2)
+    offset = buffer
     for (i, r) in enumerate(rs):
         screen.scr.blit(r, (offset, y))
         if(ons[i] == 1):
