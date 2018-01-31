@@ -38,7 +38,7 @@ def drawDotLine():
     circleSpace = (1024 - (buffer * 2)) / (dots - 1)
     offset = buffer
     for x in range(0, dots):
-        if(second / (60 / dots) >= x):
+        if(second / (300 / dots) >= x):
             pygame.draw.circle(screen.scr, fgcolor, (offset, circleY), circleRadius, 0)
         else:
             pygame.draw.circle(screen.scr, bkgcolor, (offset, circleY), circleRadius, 0)
