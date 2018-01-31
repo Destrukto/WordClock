@@ -11,7 +11,7 @@ from pygame.locals import *
 
 screen = screen()
 pygame.mouse.set_visible(0)
-font = pygame.font.Font('segoeui.ttf', 80)
+font = pygame.font.Font('segoeui.ttf', 78)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
