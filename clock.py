@@ -11,7 +11,7 @@ from pygame.locals import *
 
 screen = screen()
 pygame.mouse.set_visible(0)
-font = pygame.font.Font('segoeui.ttf', 78)
+font = pygame.font.Font('segoeui.ttf', 80)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
@@ -47,11 +47,11 @@ running = True
 while running:
     screen.scr.fill((0,0,0))
     line1 = 5
-    line2 = 105
-    line3 = 205
-    line4 = 305
-    line5 = 405
-    line6 = 505
+    line2 = 100
+    line3 = 195
+    line4 = 280
+    line5 = 375
+    line6 = 465
     hour = int(strftime("%I", localtime()))
     minute = int(strftime("%M", localtime()))
     if(minute >= 25):
