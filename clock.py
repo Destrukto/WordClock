@@ -28,7 +28,7 @@ def dw(texts, ons, y):
         rs.append(r)
         totalwidth += r.get_width()
     leftover = (1024 - totalwidth - (buffer * 2)) / len(texts)
-    offset = buffer
+    offset = (buffer / 2)
     for (i, r) in enumerate(rs):
         screen.scr.blit(r, (offset, y))
         if(ons[i] == 1):
@@ -47,12 +47,12 @@ def drawDotLine():
 running = True
 while running:
     screen.scr.fill((0,0,0))
-    line1 = 5
-    line2 = 100
-    line3 = 195
-    line4 = 280
-    line5 = 375
-    line6 = 465
+    line1 = 0
+    line2 = 95
+    line3 = 190
+    line4 = 285
+    line5 = 380
+    line6 = 475
     hour = int(strftime("%I", localtime()))
     minute = int(strftime("%M", localtime()))
     if(minute >= 25):
