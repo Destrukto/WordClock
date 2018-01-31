@@ -11,13 +11,13 @@ from pygame.locals import *
 
 screen = screen()
 pygame.mouse.set_visible(0)
-font = pygame.font.Font('segoeui.ttf', 70)
+font = pygame.font.Font('segoeui.ttf', 73)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
 circleY = 560
 circleRadius = 5
-dots = 20
+dots = 30
 
 def dw(texts, ons, y):
     rs = []
@@ -34,7 +34,7 @@ def dw(texts, ons, y):
             screen.scr.blit(font.render(texts[i], True, fgcolor), (offset, y))
         offset += r.get_width() + leftover
 def drawDotLine():
-    second = int(strftime("%S", localtime()))
+    second = ((int(strftime("%M", localtime())) % 5) *60) + (int(strftime("%S", localtime())))
     circleSpace = (1024 - (buffer * 2)) / (dots - 1)
     offset = buffer
     for x in range(0, dots):
@@ -47,11 +47,11 @@ running = True
 while running:
     screen.scr.fill((0,0,0))
     line1 = 10
-    line2 = 90
-    line3 = 170
-    line4 = 250
-    line5 = 330
-    line6 = 410
+    line2 = 100
+    line3 = 190
+    line4 = 280
+    line5 = 370
+    line6 = 460
     hour = int(strftime("%I", localtime()))
     minute = int(strftime("%M", localtime()))
     if(minute >= 25):
