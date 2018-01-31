@@ -11,7 +11,7 @@ from pygame.locals import *
 
 screen = screen()
 pygame.mouse.set_visible(0)
-font = pygame.font.Font('segoeui.ttf', 73)
+font = pygame.font.Font('segoeui.ttf', 80)
 bkgcolor = (70, 70, 70)
 fgcolor = (255, 255, 255)
 buffer = 50
@@ -46,12 +46,12 @@ def drawDotLine():
 running = True
 while running:
     screen.scr.fill((0,0,0))
-    line1 = 10
-    line2 = 100
-    line3 = 190
-    line4 = 280
-    line5 = 370
-    line6 = 460
+    line1 = 5
+    line2 = 105
+    line3 = 205
+    line4 = 305
+    line5 = 405
+    line6 = 505
     hour = int(strftime("%I", localtime()))
     minute = int(strftime("%M", localtime()))
     if(minute >= 25):
