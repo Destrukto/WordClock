@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://www.raspberrypi.org/forums/viewtopic.php?t=57552
+
 NOBLANK="
 @xset s noblank
 @xset s off
